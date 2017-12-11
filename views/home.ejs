@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mining</title>
+	<script src="./assets/script/jquery.min.js"></script>
+	<script src="./assets/script/bootstrap.min.js"></script>
+	<script src="./assets/script/home.js"></script>
+	<script src="./assets/plugin/highchart/script.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+	<script>
+    var rice = JSON.parse('<%- JSON.stringify(rice)%>');
+    var maize = JSON.parse('<%- JSON.stringify(maize)%>');
+    var sweetPotato = JSON.parse('<%- JSON.stringify(sweetPotato)%>');
+    var rain = JSON.parse('<%- JSON.stringify(rain)%>');
+	</script>
+	<form id='filter'>
+		<div class="col-sm-4"></div>
+		<label for="inputEmail3" class="col-sm-4 control-label">Năm: </label>
+		<div class="col-sm-8">
+		<select class="selectpicket" id="year" name="year">
+			<%for(var i = 2006; i <= 2016; i++){%>
+				<option value="<%- i%>"><%- i%></option>
+			<%}%>
+		</select>
+		</div>
+
+	<div id='container' style="padding-bottom: 200px">
+	</div>
+	
+	<div id='container2'>
+	</div>
+	</form>
+</body>
+</html>
